@@ -1,0 +1,1 @@
+.title:first-letter{color:red;font-size:2em}.text:first-line{font-size:2em;color:blue}.inline:first-letter{color:red;font-size:2em}.text::-moz-selection{color:lime;background:red}.text::selection{color:lime;background:red}.dolar:after,.dolar:before{content:'';display:block;width:20px;height:20px;background:red}

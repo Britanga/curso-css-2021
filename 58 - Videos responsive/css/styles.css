@@ -1,0 +1,25 @@
+/*
+    Vídeos responsive:
+        La forma más común es hacer un padding-bottom de 56.25%, éste número es el resultado de la operación (9 / 16) es decir un formato 16:9, esto da como resultado 0.5625 si lo multiplicamos por 100 el resultado es 56.25
+*/
+
+.container{
+    width: 80%;
+    margin-left: auto; /* Contenedor centrado */
+    margin-right: auto; /* Contenedor centrado */
+    min-width: 320px;
+    max-width: 1400px;
+}
+
+.video{
+    height: 0; /* q no tenga altura */
+    padding-bottom: 56.25%; /* con esto conseguimos el formato 16:9 */
+    position: relative; /* para q el contenedor del video se mueva */
+}
+
+.video iframe{
+    position: absolute; /* se colocara respecto a su padre q es .video */
+    /* Ya q al darle position: absolute la caja pierde sus dimensiones asignamos un width y height*/
+    width: 100%;
+    height: 100%;
+}

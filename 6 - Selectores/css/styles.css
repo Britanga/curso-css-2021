@@ -1,0 +1,145 @@
+/* SELECTORES */
+
+/* 
+    Selectores simples
+        Selectores elementales
+            Selector universal -> *
+            Selector de tipo o etiqueta -> Nombre de la etiqueta
+        Selectores de atributo
+            id -> id del elemento
+            clase -> clase del elemento
+            otros atributos
+                [atributo]
+                [atributo="valor"]
+                [atributo^="valor"]
+                [atributo*="valor"]
+                [atributo$="valor"]
+                [atributo|="valor"]
+    Selectores compuestos
+        Selectores agrupados
+        Selectores combinadores
+            Selector descendiente
+            Selector de hermano siguiente +
+            Selector de hermanos siguientes ~
+            Selector de hijo directo >
+*/
+
+/* Selector universal: Selecciona todos los elementos,
+No es bueno abusar del uso de este selector */
+/* *{
+    background-color: lightcoral;
+} */
+
+/* Selector de tipo o etiqueta */
+/* h1{
+    background-color: lightcyan;
+}
+
+p{
+    background-color: lightgreen;
+}
+
+ul{
+    background-color: red;
+}
+
+li{
+    background-color: blue;
+} */
+
+/* Selector id:
+Estos son sensibles a mayusculas y minusculas (hay que escribirlo exactamente igual)
+No es recomendable dar estilos con id ya que son unicos y solo puede haber uno y uno de los principios de CSS es que los estilos sean reutilizables */
+/* #title{
+    background-color: lightgreen;
+} */
+
+/* Selector clase:
+Son sensibles a mayusculas y minusculas también
+Pueden haber infinita cantidad de clases
+Puede usarse en diferentes elementos html aunque no tendría sentido pero se puede */
+/* .title{
+    background-color: lightsalmon;
+}
+
+.text{
+    background-color: limegreen;
+} */
+
+/* Selector otros atributos */
+
+/* Selector otros atributos [atributo]:
+Selecciona todos los elementos href */
+/* [href]{
+    background-color: mediumorchid;
+} */
+
+/* Selector otros atributos [atributo="valor"]:
+Selecciona los elementos que se llamen igual a "valor" */
+/* [href="https://google.com"]{
+    background-color: orangered;
+} */
+
+/* Selector otros atributos [atributo^="valor"]:
+Selecciona los elementos que empiecen con el nombre de "valor" */
+/* [href^="color"]{
+    background-color: red;
+} */
+
+/* Selector otros atributos [atributo*="valor"]:
+Selecciona los elementos que coincidan con el nombre de "valor" independientemente de donde este */
+/* [href*="modo"]{
+    background-color: green;
+} */
+
+/* Selector otros atributos [atributo$="valor"]:
+Selecciona los elementos que terminen con el nombre de "valor" */
+/* [href$="azul"]{
+    background-color: steelblue;
+} */
+
+/* Selector otros atributos [atributo|="valor"]:
+Selecciona los elementos con el nombre de "valor" a pesar de tener el "-" */
+/* [lang|="en"]{
+    background-color: magenta;
+} */
+
+/* Selectores agrupados:
+Se agrupan los selectores separados por comas y se escribe el estilo una sola vez */
+/* .text,
+.text-2,
+.text-3,
+.text-4{
+    background-color: steelblue;
+} */
+
+/* Selectores combinadores */
+
+/* Selector descendiente */
+/* div .title-2{
+    background-color: teal;
+} */
+
+/* Selector de hermano siguiente +
+Selecciona al hermano siguiente adyacente */
+/* .text-2 + h2{
+    background-color: tomato;
+} */
+
+/* Selector de hermanos siguientes ~
+Selecciona a todos los hermanos siguientes
+OJO: No es recomendable bajar más de 2 niveles */
+/* Ejemplo de 1 nivel */
+/* .text-2 ~ .text{
+    background-color: teal;
+} */
+/* Ejemplo de 2 niveles */
+/* .text-2 ~ .text span{
+    background-color: teal;
+} */
+
+/* Selector de hijo directo >
+Selecciona SOLO los hijos directos */
+/* .container > p{
+    background-color: tomato;
+} */

@@ -1,0 +1,34 @@
+<!-- Establece el tipo de estandar del documento (HTML5) -->
+<!DOCTYPE html>
+
+<!-- Inicio del documento HTML -->
+<html lang="es">
+
+<!-- Datos que le pasamos al navegador con información de nuestra página web -->
+<head>
+    <meta charset="UTF-8"> <!--Para poder usar los acentos y la ñ-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Formas de Importar CSS -->
+    <!-- Forma 1 y recomendable: El hecho de tenerlo en 1 archivo separado implica que si cambiamos algo lo cambia en todos los documentos HTML -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Conectar HTML y CSS</title>
+    <!-- Forma 2: Se usa cuando se esta trabajando sobre un correo electronico, en esa situación no se tiene opción de importar como en Forma 1 -->
+    <style>
+        /* body {
+            background-color: slateblue;
+        } */
+        /* Forma 4: Esto equivale a Forma 1 pero en lugar de usar una etiqueta usamos @import,
+        la desventaja es que implica que se va a llamar a cargar de forma asincrona, es decir, nuestro index.html va a cargar todas las cosas y una vez que este archivo este listo lo vas a ver.
+        Eso como experiencia de usuario es muy mala ya que al principio se verá de una forma y en segundos de otra (No usarlo jamás a menos que sea la única opción)*/
+        /* @import url(css/styles.css); */
+    </style>
+</head>
+
+<!-- Representa todo el contenido de nuestra página web -->
+<body>
+    <!-- Forma 3: Los estilos en línea se usan desde javascript no desde html, en html se puede pero no se utiliza nunca -->
+    <h1 style="background-color: springgreen;">Conectar HTML y CSS</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam provident nisi accusantium tempora eligendi repudiandae aliquid blanditiis ullam beatae doloremque harum voluptas hic quibusdam officiis, reiciendis dolores error labore totam.</p>
+</body>
+</html>

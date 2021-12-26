@@ -1,0 +1,59 @@
+/*
+    No existen propiedades para imágenes en CSS
+
+    1. Imágenes responsive. En el archivo base se recomienda poner esta regla
+        img{
+            max-width:100%;
+        }
+
+    2. Las imágenes por defecto son elementos inline, esto causa un espacio por debajo debido a su line-height, se puede solucionar de dos formas.
+        Dando un line-height:0 al contenedor o un display:block a la imagen
+
+    3. Centrado horizontal
+        imagen con display:block y márgenes laterales automáticos text-align: center, si la imagen no es de bloque
+
+    4. Centrado vertical
+        flexbox (la mejor opción)
+        vertical-align: middle. A la imagen y al texto (Versión antigua antes de flexbox)
+*/
+
+/* Para que nunca desborde su contenedor */
+/*.img{
+    max-width: 100%;*/
+    /* Quita el borde debajo de la img (1era forma si necesitamos q la img sea de bloque, más usado) */
+    /* display: block; */
+    /* Centra horizontalmente la imagen a contenidos de bloque (manera correcta, no margin: 0 auto) */
+    /* margin-left: auto;
+    margin-right: auto; */
+/*}*/
+
+/*.img-container{
+    background: lavender;*/
+    /* Quita el borde debajo de la img (2da forma si necesitamos q la img sea de linea, menos usado) */
+    /* line-height: 0; */
+    /* Centra horizontalmente la imagen a contenidos de linea */
+    /*text-align: center;
+}*/
+
+/* Centra verticalmente (Si se usa solo, funciona cuando el texto es 1 linea, convirtiendo en display: table y luego a display: table-cell el texto, funciona para textos multilineas ) */
+/* .img-container img,
+.img-container span{
+    vertical-align: middle;
+} */
+
+/* Permite asignar un comportamiento de tabla a los elementos que haya dentro (Necesario para centrar verticalmente textos multilinea con vertical-align: middle) */
+/* .img-container{
+    display: table;
+} */
+
+/* Permite asignar un comportamiento de celda de una tabla. (Necesario para centrar verticalmente textos multilinea con vertical-align: middle) */
+/* .img-container span,
+.img-container p{
+    display: table-cell;
+} */
+
+/* Centrar verticalmente con flexbox (La mejor opción) */
+.img-container{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,96 @@
+/*
+    Ejercicio de practica usando lo más que se pueda flexbox, pero actualmente un formulario no se haria solo con flexbox, toda la maquetación del formulario exterior seria grid y c/u de los campos seria flexbox
+*/
+
+body {
+    font-family: sans-serif;
+    background-image: radial-gradient(circle, #b94bf8, #3a1957);
+    background-repeat: no-repeat;
+    margin: 0;
+    color: #eee;
+    height: 100vh;
+}
+
+img {
+    max-width: 80%;
+}
+
+.card {
+    background-color: #333;
+    width: 80%;
+    height: 450px;
+    display: flex; /* Permite que todo este dentro de card, tanto card left como card right */
+    margin: 2em auto; /* Margenes al card del formulario */
+}
+
+.card__left {
+    width: 20%; /* Junto con card__right da 100% */
+    display: flex; /* Para manipularlo con flexbox */
+    align-items: flex-start; /* Coloca el contenido arriba */
+    justify-content: center; /* Centra el contenido */
+    background-color: #222;
+    padding: .5rem 0; /* Margen al contenido .5rem es arriba y abajo 0 es derecha izquierda */
+}
+
+.card__right {
+    width: 80%; /* Junto con card__left da 100% */
+    padding: 0 1rem; /* Margen al contenido 0 es arriba y abajo 1rem es derecha izquierda */
+}
+
+.card__title {
+    text-transform: uppercase;
+    margin: 1rem 0; /* 1rem arriba y abajo 0 es derecha izquierda */
+}
+
+.form {
+    display: flex; /* Para usar flexbox */
+    flex-direction: column; /* Para mantener los campos uno abajo del otro */
+    /* Margen distribuido equitativamente en los campos hijos directos de form (nombre y apellido no son hijos directos pero su contenedor si, en este caso form__names) */
+    justify-content: space-between;
+    height: 350px;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column; /* Para mantener las etiquetas y los inputs uno abajo del otro */
+}
+
+.form__names {
+    display: flex; /* Se coloca automaticamente nombre y apellido uno al lado del otro */
+    /* Margen distribuido equitativamente en los campos hijos directos de form__names (nombre y apellido) */
+    justify-content: space-between;
+}
+
+.form__names input {
+    width: 100%;
+}
+
+.form__label {
+    margin-bottom: .5rem; /* Para separar un poquito la etiqueta de los inputs */
+    text-transform: uppercase;
+    font-size: .8rem; /* Reduce un poquito el tamaño de la fuente */
+}
+
+.form__input,
+.form__textarea {
+    background: none; /* Para quitar el fondo blanco de todos los inputs y de textarea*/
+    border: none; /* Para quitar los bordes de todos los inputs y de textarea*/
+    border-bottom: 1px solid #eee; /* Añade una linea blanca horizontal */
+    color: inherit; /* Hereda el color de fuente del body */
+}
+
+.form__textarea {
+    resize: none; /* Para q no se pueda cambiar de tamaño */
+    border: 1px solid #eee;
+    flex-basis: 100px; /* Asigna altura al contenedor que esta en modo flexbox */
+}
+
+.form__submit {
+    width: 40%;
+    background: rgb(0, 183, 255);
+    border: none;
+    padding: .8rem; /* Reduce un poquito el margen lo que hace que el boton sea mas grande */
+    border-radius: 15px; /* Redondea las esquinas */
+    text-transform: uppercase;
+    color: inherit;
+} 

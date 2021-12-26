@@ -1,0 +1,42 @@
+/*
+       Breakpoints: Existen dos tipos de breakpoints, los major breakpoints y los minor breakpoints
+        Los major breakpoints son los que cambian la apariencia de la web de forma significativa
+        Los minor breakpoints son los que cambian una cosa específica para un elemento en concreto
+        Medidas más comunes:
+            0 - 320px - 360px: Móviles portrait
+            480px - 640px - 768px: Móviles landscape - tablet
+            1024px - 1200px - 1400px - 1440px: tablets grandes, portátiles no HD
+            1920 - hacia arriba: HD, 2k, 4k...
+*/
+
+.menu{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: 3rem;
+}
+
+/* Modo tablet */
+/* Importante tener los estilos arriba para q el efecto cascada no afecte el MediaQuery */
+body{
+    background-color: royalblue;
+}
+
+/* Modo escritorio */
+/* MediaQuery (breakpoint)
+    min-width aplica al breackpoint siempre y cuando el width sea minimo a x numero */
+@media screen and (min-width:1400px){
+    body{
+        /* Propiedad q queremos modificar cuando width sea +1400px */
+        background-color: green;
+    }
+
+    .menu{
+        /* Coloca de manera horizontal el menú */
+        display: flex;
+        justify-content: space-around;
+    }
+    /* IMPORTANTE saber q los estilos q no se escriban se heredan
+    Ejm: Si se tiene un color green en el menu y el body lo tenemos green en el MediaQuery el color del texto y el fondo sera green por ende tendriamos un problema ya q no se verian las letras, la solucion seria escribir otro color en el MediaQuery para el texto */
+}

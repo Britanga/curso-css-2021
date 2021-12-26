@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+
+.header{
+    background-color: lightcoral;
+    height: 100px;
+    margin-bottom: 20px;
+    /* Solución a colapsado de imagenes entre padres e hijos */
+    /*overflow: hidden;*/ /*No tiene sentido a nivel de contexto pero funciona*/
+    /* padding-top: 0.1px; */
+    border-top: 0.1px solid lightcoral;
+}
+
+.title{
+    margin: 0; /**/
+    margin-top: 30px;
+}
+
+.box-1,
+.box-2{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightcyan;
+    width: 300px;
+    height: 300px;
+}
+
+.box-1{
+    /*Recomendable usar el margin-bottom por separado, no usarlo en conjunto con todas las cajas xq los margenes no se van a aplicar como uno desea (esto solo pasa en margenes verticales, horizontales no hay problema)*/
+    margin-bottom: 30px;
+}

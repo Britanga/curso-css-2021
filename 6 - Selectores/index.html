@@ -1,0 +1,53 @@
+<!-- Establece el tipo de estandar del documento (HTML5) -->
+<!DOCTYPE html>
+
+<!-- Inicio del documento HTML -->
+<html lang="es">
+
+<!-- Datos que le pasamos al navegador con información de nuestra página web -->
+<head>
+    <meta charset="UTF-8"> <!--Para poder usar los acentos y la ñ-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importar CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Selectores</title>
+</head>
+
+<!-- Representa todo el contenido de nuestra página web -->
+<body>
+    <!-- <h1 id="title">Selectores CSS</h1> -->
+    <h1 class="title">Selectores CSS</h1>
+    <p class="subtitle">Subtítulo</p>
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam provident nisi accusantium tempora eligendi repudiandae aliquid blanditiis ullam beatae doloremque harum voluptas hic quibusdam officiis, reiciendis dolores error labore totam.
+    </p>
+    <h2 class="title-2">Título secundario</h2>
+    <div class="container"> <!-- Padre -->
+        <p class="text-2"> <!-- Hijo directo -->
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam provident nisi accusantium tempora eligendi repudiandae aliquid blanditiis ullam beatae doloremque harum voluptas hic quibusdam officiis, reiciendis dolores error labore totam.
+        </p>
+        <h2 class="title-2">Título secundario</h2>
+        <div>
+            <p class="text"> <!-- Nieto -->
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam provident nisi accusantium tempora eligendi repudiandae 
+                <span>aliquid</span>
+                blanditiis ullam beatae doloremque harum voluptas hic quibusdam officiis, reiciendis dolores error labore totam.
+            </p>
+        </div>
+        <h2 class="title-2">Título secundario</h2>
+        <p class="text"> <!-- Hijo directo -->
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam provident nisi accusantium tempora eligendi repudiandae aliquid blanditiis ullam beatae doloremque harum voluptas hic quibusdam officiis, reiciendis dolores error labore totam.
+        </p>
+    </div>
+    
+    <!-- <ul>
+        <li class="text">Item 1</li>
+    </ul>
+    <a href="https://google.com">Enlace a google</a>
+    <a href="color-modo-random">Color random</a>
+    <a href="#seccion-verde">Color verde</a>
+    <a href="color-azul">Color azul</a>
+    <p lang="en-GB">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque velit porro sed exercitationem sint dolorem, reiciendis nisi? Deserunt necessitatibus iusto nulla, ducimus aliquid, est error enim eligendi, ipsam dolorem impedit?</p> -->
+</body>
+</html>

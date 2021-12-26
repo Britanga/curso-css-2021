@@ -1,0 +1,59 @@
+<!-- Establece el tipo de estandar del documento (HTML5) -->
+<!DOCTYPE html>
+
+<!-- Inicio del documento HTML -->
+<html lang="es">
+
+<!-- Datos que le pasamos al navegador con información de nuestra página web -->
+<head>
+    <meta charset="UTF-8"> <!--Para poder usar los acentos y la ñ-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importar CSS's -->
+    <link rel="stylesheet" href="css/styles-dist.css">
+    <title>Tablas</title>
+</head>
+
+<!-- Representa todo el contenido de nuestra página web -->
+<body>
+    <!-- div para generar un scroll dentro de la tabla mediante css-->
+    <div class="table-container">
+    <table class="table">
+        <caption>Avengers</caption>
+        <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col class="col3">
+        </colgroup>
+        <thead>
+            <th class="table__head">Username</th>
+            <th class="table__head">Email</th>
+            <th class="table__head">Company</th>
+        </thead>
+        <tbody>
+            <tr class="table__row">
+                <td class="table__data">TonyStark</td>
+                <td class="table__data">tonystark@gmail.com</td>
+                <td class="table__data">Marvel</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__data">Bruce Banner</td>
+                <td class="table__data">brucebanner@gmail.com</td>
+                <td class="table__data">Marvel</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__data">PeterParker</td>
+                <td class="table__data">spiderman@gmail.com</td>
+                <td class="table__data">Marvel</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__data">SteveRogers</td>
+                <td class="table__data"></td>
+                <td class="table__data">Marvel</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iste impedit porro reprehenderit ex quibusdam mollitia illo expedita nobis dolorem suscipit magnam, quos excepturi harum enim tempora? Aliquam, ad soluta.</p>
+</body>
+</html>
